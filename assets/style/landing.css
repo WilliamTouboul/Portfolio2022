@@ -34,7 +34,6 @@ body::-webkit-scrollbar {
 }
 
 ::-moz-selection {
-  /* Code for Firefox */
   color: #26262D;
   background: #D5FF00;
 }
@@ -111,15 +110,15 @@ nav ul {
   }
 }
 
+nav ul > li a {
+  text-decoration: none;
+  color: #26262D;
+}
+
 @media only screen and (max-width: 600px) {
   nav ul > li {
     font-size: 12px;
   }
-}
-
-nav ul > li a {
-  text-decoration: none;
-  color: #26262D;
 }
 
 nav button {
@@ -146,6 +145,7 @@ nav button {
   nav button {
     width: 30%;
     height: auto;
+    font-size: 16px;
   }
 }
 
@@ -165,9 +165,9 @@ nav button:after {
 
 @media only screen and (max-width: 600px) {
   nav button:after {
-    width: 80px;
+    width: 88px;
     height: 25px;
-    left: calc(50% - 40px);
+    left: calc(50% - 44px);
     bottom: -3px;
   }
 }
@@ -210,6 +210,13 @@ nav button:hover:after {
   color: #26262D;
 }
 
+@media only screen and (max-width: 600px) {
+  .hero {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .hero .line1 {
   width: 100%;
   margin-left: 50px;
@@ -225,10 +232,23 @@ nav button:hover:after {
   font-family: interExtraBold;
 }
 
+@media only screen and (max-width: 600px) {
+  .hero .line1 {
+    margin-left: 0;
+  }
+}
+
 .hero .line1 span {
   font-size: 80px;
   color: #26262D;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+  .hero .line1 span {
+    font-size: 40px;
+    z-index: 4;
+  }
 }
 
 .hero .line1 span > span {
@@ -251,6 +271,12 @@ nav button:hover:after {
           user-select: none;
 }
 
+@media only screen and (max-width: 600px) {
+  .hero .line1 img {
+    margin-left: -50px;
+  }
+}
+
 .hero .line2 {
   width: 100%;
   display: -webkit-box;
@@ -267,12 +293,37 @@ nav button:hover:after {
   margin-left: -80px;
 }
 
+@media only screen and (max-width: 600px) {
+  .hero .line2 {
+    font-size: 40px;
+    margin-left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .hero .line2 > span:first-child {
   margin-top: 10px;
   margin-right: 50px;
   font-size: 80px;
   color: #26262D;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+  .hero .line2 > span:first-child {
+    font-size: 40px;
+    margin-right: 0;
+  }
 }
 
 .hero .line2 > span:first-child > span {
@@ -293,12 +344,32 @@ nav button:hover:after {
   margin-bottom: 15px;
 }
 
+@media only screen and (max-width: 600px) {
+  .hero .line2 img {
+    height: 80px;
+    margin-left: 0;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .hero .line2 > span:last-child {
   margin-top: 10px;
   margin-left: 20px;
   font-size: 80px;
   color: #26262D;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+  .hero .line2 > span:last-child {
+    font-size: 40px;
+  }
 }
 
 .hero .line2 > span:last-child > span {
@@ -323,11 +394,26 @@ nav button:hover:after {
           justify-content: center;
 }
 
+@media only screen and (max-width: 600px) {
+  .hero .line3 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .hero .line3 > span:first-child {
   font-size: 80px;
   font-family: interExtraBold;
   color: #26262D;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+  .hero .line3 > span:first-child {
+    font-size: 40px;
+  }
 }
 
 .hero .line3 > span:first-child > span {
@@ -346,6 +432,15 @@ nav button:hover:after {
   font-family: 'Poppins';
   font-size: 14px;
   margin-left: 10px;
+  width: 120px;
+}
+
+@media only screen and (max-width: 600px) {
+  .hero .line3 > div {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    width: auto;
+  }
 }
 
 .hero .line3 > div button {
@@ -360,6 +455,7 @@ nav button:hover:after {
 .hero .line3 > div button:hover {
   -webkit-animation: dingadingaling 650ms ease-out;
           animation: dingadingaling 650ms ease-out;
+  color: #D5FF00;
 }
 
 .hero .line4 {
@@ -380,6 +476,12 @@ nav button:hover:after {
   font-family: interExtraBold;
   color: #26262D;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+  .hero .line4 > span {
+    font-size: 40px;
+  }
 }
 
 .hero .line4 > span > span {
@@ -404,6 +506,12 @@ nav button:hover:after {
           user-select: none;
 }
 
+@media only screen and (max-width: 600px) {
+  .hero > img {
+    display: none;
+  }
+}
+
 /* ---------------------------------- About --------------------------------- */
 .about {
   margin-bottom: 140px;
@@ -423,6 +531,18 @@ nav button:hover:after {
   min-height: calc(100vh - 150px);
 }
 
+@media only screen and (max-width: 600px) {
+  .about .container {
+    margin-left: 0;
+    margin-right: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: auto;
+  }
+}
+
 .about .container .left {
   width: 30%;
   z-index: 3;
@@ -433,12 +553,18 @@ nav button:hover:after {
       align-self: center;
 }
 
+@media only screen and (max-width: 600px) {
+  .about .container .left {
+    width: auto;
+  }
+}
+
 .about .container .left img {
-  height: 180px;
-  width: 180px;
+  height: 120px;
+  width: 120px;
   position: absolute;
-  top: -200px;
-  left: 110px;
+  top: -80px;
+  right: 50px;
   -webkit-animation: StarRotateAbout 8s infinite;
           animation: StarRotateAbout 8s infinite;
 }
@@ -454,6 +580,13 @@ nav button:hover:after {
   font-family: interExtraBold;
   font-size: 24px;
   color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  .about .container .left > div {
+    width: 80%;
+    margin: auto;
+  }
 }
 
 .about .container .left > div div {
@@ -473,6 +606,14 @@ nav button:hover:after {
   gap: 12px;
 }
 
+@media only screen and (max-width: 600px) {
+  .about .container .right {
+    min-height: 100vh;
+    width: 100%;
+    margin-top: 50px;
+  }
+}
+
 .about .container .right .itemTransition {
   -webkit-transition: width 300ms ease;
   transition: width 300ms ease;
@@ -486,6 +627,16 @@ nav button:hover:after {
   position: relative;
   -webkit-transform-origin: center center;
           transform-origin: center center;
+}
+
+@media only screen and (max-width: 600px) {
+  .about .container .right .item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 30%;
+  }
 }
 
 .about .container .right .item:before {
@@ -509,6 +660,12 @@ nav button:hover:after {
   opacity: 0.8;
   -webkit-transition: all 320ms ease-in-out;
   transition: all 320ms ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+  .about .container .right .item .number {
+    font-size: 35px;
+  }
 }
 
 .about .container .right .item .vert {
@@ -703,6 +860,13 @@ nav button:hover:after {
   color: #000000;
 }
 
+@media only screen and (max-width: 600px) {
+  .latest {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .latest #backtitle {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
@@ -740,6 +904,15 @@ nav button:hover:after {
   z-index: 2;
 }
 
+@media only screen and (max-width: 600px) {
+  .latest > div {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+}
+
 .latest > div .left {
   width: 50%;
   display: -webkit-box;
@@ -752,6 +925,12 @@ nav button:hover:after {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .latest > div .left {
+    width: 100%;
+  }
 }
 
 .latest > div .left .imageProject {
@@ -780,6 +959,12 @@ nav button:hover:after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+  .latest > div .right {
+    width: 100%;
+  }
 }
 
 .latest > div .right h2 {
@@ -935,6 +1120,12 @@ footer {
   padding: 120px 240px;
 }
 
+@media only screen and (max-width: 600px) {
+  footer {
+    padding: 0;
+  }
+}
+
 footer .nav-footer {
   height: 100px;
   font-size: 16px;
@@ -955,9 +1146,29 @@ footer .nav-footer {
   font-family: interExtraBold;
 }
 
+@media only screen and (max-width: 600px) {
+  footer .nav-footer {
+    padding-left: 24px;
+  }
+}
+
 footer .nav-footer h1 {
   font-size: 24px;
   letter-spacing: -0.045em;
+}
+
+@media only screen and (max-width: 600px) {
+  footer .nav-footer h1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
 }
 
 footer .nav-footer h1 > a {
@@ -975,6 +1186,15 @@ footer .nav-footer ul {
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 140px;
+}
+
+@media only screen and (max-width: 600px) {
+  footer .nav-footer ul {
+    gap: 20px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
 }
 
 footer .nav-footer ul > li {
@@ -1009,6 +1229,14 @@ footer .nav-footer button {
   pointer-events: none;
 }
 
+@media only screen and (max-width: 600px) {
+  footer .nav-footer button {
+    width: 30%;
+    height: auto;
+    font-size: 16px;
+  }
+}
+
 footer .nav-footer button:after {
   content: '';
   background: #26262D;
@@ -1040,6 +1268,13 @@ footer h2 {
   font-family: interExtraBold;
   font-size: 70px;
   color: #ffffff;
+}
+
+@media only screen and (max-width: 600px) {
+  footer h2 {
+    font-size: 50px;
+    text-align: center;
+  }
 }
 
 footer a {
@@ -1096,10 +1331,24 @@ footer .bottom {
   font-size: 16px;
 }
 
+@media only screen and (max-width: 600px) {
+  footer .bottom {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 footer .bottom .left {
   font-size: 11px;
   color: #ffffff;
   opacity: 0.8;
+}
+
+@media only screen and (max-width: 600px) {
+  footer .bottom .left {
+    font-size: 8px;
+    opacity: 0.6;
+  }
 }
 
 footer .bottom .right {
@@ -1120,6 +1369,12 @@ footer .bottom .right .rs {
   opacity: 0.2;
   -webkit-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
+}
+
+@media only screen and (max-width: 600px) {
+  footer .bottom .right .rs {
+    font-size: 36px;
+  }
 }
 
 footer .bottom .right .rs:hover {
