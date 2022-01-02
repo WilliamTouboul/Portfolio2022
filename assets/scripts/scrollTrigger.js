@@ -50,3 +50,22 @@ gsap.to('#imageProject3', {
     },
     y: 50
 });
+
+gsap.to('.endBgTransi', {
+    scrollTrigger: {
+        trigger: ".endBgTransi",
+        start: "top 80%",
+        scrub: true
+    },
+    y: 50
+});
+
+
+gsap.to('footer',{
+    scrollTrigger:{
+        trigger : "main",
+        start : "bottom 1%",
+        scrub : true
+    },
+    zIndex : "9999"
+})
