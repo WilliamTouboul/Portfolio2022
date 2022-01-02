@@ -665,6 +665,7 @@ nav button:hover:after {
 @media only screen and (max-width: 600px) {
   .about .container .right .item .number {
     font-size: 35px;
+    top: -17px;
   }
 }
 
