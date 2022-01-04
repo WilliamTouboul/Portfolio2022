@@ -129,6 +129,11 @@ nav {
         color: $white;
         position: relative;
 
+        a {
+            text-decoration: none;
+            color: $white;
+        }
+
         @media only screen and (max-width: $breakpoint-phone) {
             width: 30%;
             height: auto;
@@ -157,8 +162,10 @@ nav {
         }
 
         &:hover {
+            a {
+                color: $fluo;
 
-            color: $fluo;
+            }
 
             &:after {
                 height: 60px;
@@ -190,6 +197,7 @@ nav {
     color: $dark;
 
     @media only screen and (max-width: $breakpoint-phone) {
+        height: 80vh;
         padding-left: 0;
         padding-right: 0;
     }
@@ -212,7 +220,7 @@ nav {
             overflow: hidden;
 
             @media only screen and (max-width: $breakpoint-phone) {
-                font-size: 40px;
+                font-size: 50px;
                 z-index: 4;
             }
 
@@ -249,7 +257,7 @@ nav {
         margin-left: -80px;
 
         @media only screen and (max-width: $breakpoint-phone) {
-            font-size: 40px;
+            font-size: 50px;
             margin-left: 0;
             flex-direction: column;
             align-items: center;
@@ -265,7 +273,7 @@ nav {
             overflow: hidden;
 
             @media only screen and (max-width: $breakpoint-phone) {
-                font-size: 40px;
+                font-size: 50px;
                 margin-right: 0;
             }
 
@@ -285,7 +293,7 @@ nav {
             margin-bottom: 15px;
 
             @media only screen and (max-width: $breakpoint-phone) {
-                height: 80px;
+                height: 60px;
                 margin-left: 0;
                 align-self: center;
                 justify-self: center;
@@ -302,7 +310,7 @@ nav {
             overflow: hidden;
 
             @media only screen and (max-width: $breakpoint-phone) {
-                font-size: 40px;
+                font-size: 50px;
             }
 
             >span {
@@ -330,7 +338,7 @@ nav {
             overflow: hidden;
 
             @media only screen and (max-width: $breakpoint-phone) {
-                font-size: 40px;
+                font-size: 50px;
             }
 
             >span {
@@ -383,7 +391,7 @@ nav {
             overflow: hidden;
 
             @media only screen and (max-width: $breakpoint-phone) {
-                font-size: 40px;
+                font-size: 50px;
             }
 
             >span {
@@ -839,14 +847,17 @@ nav {
                 transform-origin: center;
                 outline: 1px $fluo solid;
 
-                span {
+                a {
+                    color: $fluo;
+                    text-decoration: none;
                     transition: transform 500ms ease-in-out;
                 }
 
                 &:hover {
                     animation: transitionButton 500ms ease-in-out forwards;
 
-                    span {
+                    a {
+                        color: $dark;
                         transform: rotate(45deg);
                     }
                 }
@@ -873,6 +884,14 @@ nav {
         flex-direction: row-reverse;
     }
 
+
+    .endBgTransi {
+        a {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+
     &>button {
         font-size: 24px;
         border: none;
@@ -889,9 +908,13 @@ nav {
 
         &:hover {
             background: $fluo;
-            outline: 0.5px solid $black;
-            color: $black;
+            outline: 0.5px solid $dark;
+            color: $dark;
             border-radius: 0;
+
+            .endBgTransi {
+                color: $dark;
+            }
 
         }
 
@@ -900,6 +923,7 @@ nav {
 
         }
     }
+
 
 }
 

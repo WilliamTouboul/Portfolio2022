@@ -141,6 +141,11 @@ nav button {
   position: relative;
 }
 
+nav button a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
 @media only screen and (max-width: 600px) {
   nav button {
     width: 30%;
@@ -172,7 +177,7 @@ nav button:after {
   }
 }
 
-nav button:hover {
+nav button:hover a {
   color: #D5FF00;
 }
 
@@ -212,6 +217,7 @@ nav button:hover:after {
 
 @media only screen and (max-width: 600px) {
   .hero {
+    height: 80vh;
     padding-left: 0;
     padding-right: 0;
   }
@@ -246,7 +252,7 @@ nav button:hover:after {
 
 @media only screen and (max-width: 600px) {
   .hero .line1 span {
-    font-size: 40px;
+    font-size: 50px;
     z-index: 4;
   }
 }
@@ -295,7 +301,7 @@ nav button:hover:after {
 
 @media only screen and (max-width: 600px) {
   .hero .line2 {
-    font-size: 40px;
+    font-size: 50px;
     margin-left: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -321,7 +327,7 @@ nav button:hover:after {
 
 @media only screen and (max-width: 600px) {
   .hero .line2 > span:first-child {
-    font-size: 40px;
+    font-size: 50px;
     margin-right: 0;
   }
 }
@@ -346,7 +352,7 @@ nav button:hover:after {
 
 @media only screen and (max-width: 600px) {
   .hero .line2 img {
-    height: 80px;
+    height: 60px;
     margin-left: 0;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
@@ -368,7 +374,7 @@ nav button:hover:after {
 
 @media only screen and (max-width: 600px) {
   .hero .line2 > span:last-child {
-    font-size: 40px;
+    font-size: 50px;
   }
 }
 
@@ -412,7 +418,7 @@ nav button:hover:after {
 
 @media only screen and (max-width: 600px) {
   .hero .line3 > span:first-child {
-    font-size: 40px;
+    font-size: 50px;
   }
 }
 
@@ -480,7 +486,7 @@ nav button:hover:after {
 
 @media only screen and (max-width: 600px) {
   .hero .line4 > span {
-    font-size: 40px;
+    font-size: 50px;
   }
 }
 
@@ -1008,7 +1014,9 @@ nav button:hover:after {
   outline: 1px #D5FF00 solid;
 }
 
-.latest > div .right button span {
+.latest > div .right button a {
+  color: #D5FF00;
+  text-decoration: none;
   -webkit-transition: -webkit-transform 500ms ease-in-out;
   transition: -webkit-transform 500ms ease-in-out;
   transition: transform 500ms ease-in-out;
@@ -1020,7 +1028,8 @@ nav button:hover:after {
           animation: transitionButton 500ms ease-in-out forwards;
 }
 
-.latest > div .right button:hover span {
+.latest > div .right button:hover a {
+  color: #26262D;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
@@ -1062,6 +1071,11 @@ nav button:hover:after {
           flex-direction: row-reverse;
 }
 
+.latest .endBgTransi a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
 .latest > button {
   font-size: 24px;
   border: none;
@@ -1082,9 +1096,13 @@ nav button:hover:after {
 
 .latest > button:hover {
   background: #D5FF00;
-  outline: 0.5px solid #000000;
-  color: #000000;
+  outline: 0.5px solid #26262D;
+  color: #26262D;
   border-radius: 0;
+}
+
+.latest > button:hover .endBgTransi {
+  color: #26262D;
 }
 
 .latest > button:active {
