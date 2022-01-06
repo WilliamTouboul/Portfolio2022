@@ -1,0 +1,136 @@
+/* -------------------------------------------------------------------------- */
+/*                                     VAR                                    */
+/* -------------------------------------------------------------------------- */
+
+$breakpoint-tablet: 768px;
+$breakpoint-phone:600px;
+
+$black : #000000;
+$white : #ffffff;
+$fluo : #D5FF00;
+$dark : #26262D;
+
+/* -------------------------------------------------------------------------- */
+/*                                    STYLE                                   */
+/* -------------------------------------------------------------------------- */
+
+/* --------------------------------- CURSOR --------------------------------- */
+
+
+
+.ht-cursor-text {
+    position: absolute;
+    top: -18px;
+    left: -18px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0) rotate(10deg);
+    opacity: 0;
+    color: $fluo !important;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    font-family: 'Poppins';
+    transition: opacity 0.4s, transform 0.3s;
+}
+
+/* ---------------------------------- MAIN ---------------------------------- */
+h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 36px;
+    font-family: interExtraBold;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+}
+
+.pfMain {
+
+
+    .selector {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        height: 120px;
+
+        button {
+            width: 140px;
+            height: 40px;
+            font-size: 16px;
+            font-family: 'Poppins';
+            border: none;
+            background-color: transparent;
+            outline: 1px $dark solid;
+            color: $dark;
+            cursor: pointer;
+            transition: all 0.2s ease-out;
+
+
+
+
+            &.active {
+                background-color: $dark;
+                color: $fluo;
+            }
+
+            &:hover {
+                background-color: $dark;
+                color: $dark;
+                border-radius: 25px;
+            }
+        }
+    }
+}
+
+.mainDisplay {
+    display: grid;
+    gap: 1rem;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 160px;
+
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-auto-rows: 240px;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #353535;
+        font-size: 3rem;
+        color: white;
+        font-family: interExtraBold;
+        box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.15rem, rgba(2, 8, 20, 0.1) 0px 0.175rem 0.175rem;
+        height: 100%;
+        width: 100%;
+        border-radius: 4px;
+        transition: all 500ms;
+        overflow: hidden;
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &:hover {
+            box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.1) 0px 0.175em 0.5em;
+            transform: translateY(-3px) scale(1.1);
+        }
+    }
+
+    @media screen and (min-width:650px) {
+        .card-tall {
+            grid-row: span 2 / autos;
+        }
+
+        .card-wide {
+            grid-column: span 2 / auto;
+        }
+    }
+}

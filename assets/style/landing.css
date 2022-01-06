@@ -1,10 +1,174 @@
 /* -------------------------------------------------------------------------- */
 /*                                     VAR                                    */
 /* -------------------------------------------------------------------------- */
+/* --------------------------------- CURSOR --------------------------------- */
+/* Cursor CSS */
+/* Cursor */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+.ht-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 150;
+  contain: layout style size;
+  pointer-events: none;
+  will-change: transform;
+  -webkit-transition: opacity 0.3s, color 0.4s;
+  transition: opacity 0.3s, color 0.4s;
+}
+
+.ht-cursor:before {
+  content: "";
+  position: absolute;
+  top: -24px;
+  left: -24px;
+  display: block;
+  width: 48px;
+  height: 48px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  background: currentColor;
+  border-radius: 50%;
+  -webkit-transition: opacity 0.1s, -webkit-transform 0.3s ease-in-out;
+  transition: opacity 0.1s, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.1s;
+  transition: transform 0.3s ease-in-out, opacity 0.1s, -webkit-transform 0.3s ease-in-out;
+}
+
+.ht-cursor-text {
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  width: 36px;
+  height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: scale(0) rotate(10deg);
+          transform: scale(0) rotate(10deg);
+  opacity: 0;
+  color: #26262D;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  font-family: 'Poppins';
+  -webkit-transition: opacity 0.4s, -webkit-transform 0.3s;
+  transition: opacity 0.4s, -webkit-transform 0.3s;
+  transition: opacity 0.4s, transform 0.3s;
+  transition: opacity 0.4s, transform 0.3s, -webkit-transform 0.3s;
+}
+
+@supports (mix-blend-mode: exclusion) {
+  .ht-cursor.-exclusion,
+  .ht-cursor.-opaque {
+    mix-blend-mode: exclusion;
+  }
+}
+
+@supports (mix-blend-mode: exclusion) {
+  .ht-cursor.-exclusion:before,
+  .ht-cursor.-opaque:before {
+    background: white;
+  }
+}
+
+.ht-cursor-text-dark {
+  color: #26262D !important;
+}
+
+.ht-cursor.-normal,
+.ht-cursor.-text {
+  mix-blend-mode: normal;
+}
+
+.ht-cursor.-normal:before,
+.ht-cursor.-text:before {
+  background: currentColor;
+}
+
+.ht-cursor.-inverse {
+  color: white;
+}
+
+.ht-cursor.-visible:before {
+  -webkit-transform: scale(0.2);
+          transform: scale(0.2);
+}
+
+.ht-cursor.-visible.-active:before {
+  -webkit-transform: scale(0.23);
+          transform: scale(0.23);
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+.ht-cursor.-pointer:before {
+  -webkit-transform: scale(0.15);
+          transform: scale(0.15);
+}
+
+.ht-cursor.-text:before {
+  opacity: 0.85;
+  -webkit-transform: scale(1.7);
+          transform: scale(1.7);
+}
+
+.ht-cursor.-text .ht-cursor-text {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.ht-cursor.-text.-active:before {
+  -webkit-transform: scale(1.6);
+          transform: scale(1.6);
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+.ht-cursor.-opaque:before {
+  -webkit-transform: scale(1.32);
+          transform: scale(1.32);
+}
+
+.ht-cursor.-opaque.-active:before {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.ht-cursor.-md:before {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.ht-cursor.-lg:before {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
+.ht-cursor.-hidden:before {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.-color-dark {
+  color: #26262D;
+}
+
+.-color-fluo {
+  color: #D5FF00;
+}
+
 /* -------------------------------------------------------------------------- */
 /*                                    FONTS                                   */
 /* -------------------------------------------------------------------------- */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
 @font-face {
   font-family: interExtraBold;
   src: url(../fonts/inter/Inter-ExtraBold.ttf);
@@ -510,11 +674,12 @@ nav button:hover:after {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  pointer-events: none;
 }
 
 @media only screen and (max-width: 600px) {
   .hero > img {
-    display: none;
+    width: 30vw;
   }
 }
 
@@ -738,7 +903,8 @@ nav button:hover:after {
       grid-template-rows: repeat(7, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  z-index: -101;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .about .points > .filler {
@@ -760,6 +926,10 @@ nav button:hover:after {
   left: calc(50% - 3px);
   -webkit-animation: waveGrid 2s infinite ease-in-out;
           animation: waveGrid 2s infinite ease-in-out;
+}
+
+.about .points > .filler:nth-child(1), .about .points > .filler:nth-child(2), .about .points > .filler:nth-child(3), .about .points > .filler:nth-child(4), .about .points > .filler:nth-child(5), .about .points > .filler:nth-child(6), .about .points > .filler:nth-child(7), .about .points > .filler:nth-child(8), .about .points > .filler:nth-child(9), .about .points > .filler:nth-child(10), .about .points > .filler:nth-child(11), .about .points > .filler:nth-child(12), .about .points > .filler:nth-child(13), .about .points > .filler:nth-child(14) {
+  opacity: 0.2;
 }
 
 .about .points > .filler:nth-child(2), .about .points > .filler:nth-child(8) {
@@ -1096,12 +1266,11 @@ nav button:hover:after {
 
 .latest > button:hover {
   background: #D5FF00;
-  outline: 0.5px solid #26262D;
   color: #26262D;
   border-radius: 0;
 }
 
-.latest > button:hover .endBgTransi {
+.latest > button:hover a {
   color: #26262D;
 }
 

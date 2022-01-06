@@ -17,7 +17,7 @@
 
 <body>
     <nav>
-        <h1><a href="../../index.html">William Touboul</a></h1>
+        <h1 data-magnetic data-cursor="-opaque -lg"><a href="../../index.html">William Touboul</a></h1>
 
         <ul>
             <li><a href="#about">A PROPOS</a></li>
@@ -52,8 +52,9 @@
         </div>
 
 
-        <button class="bottomBanner">
-            <a href="../../projects.html">Plus de projets</a>
+        <button class="bottomBanner" data-cursor-stick="#cursor-stick-area" data-cursor="-color-dark -lg "
+            data-cursor-text="Retour au projets">
+            <a href="../../projects.html" id="cursor-stick-area">Plus de projets</a>
         </button>
     </main>
 
@@ -101,8 +102,8 @@
     <!-- Barba -->
     <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
     <!-- MyJS -->
-
-    <script src="../../assets/scripts/scrollTrigger.js"></script>
+    <script src="../../assets/scripts/cursor.js"></script>
+    <!-- <script src="../../assets/scripts/scrollTrigger.js"></script> -->
     <script src="../../assets/scripts/script.js"></script>
 </body>
 

@@ -11,10 +11,10 @@
         integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/style/keyframes.css">
     <link rel="stylesheet" href="assets/style/landing.css">
+    <link rel="stylesheet" href="assets/style/projects.css">
 </head>
 
 <body>
-
     <nav>
         <h1><a href="index.html">William Touboul</a></h1>
 
@@ -26,11 +26,62 @@
         </div>
     </nav>
 
-
     <main style="min-height : 100vh">
-        <p style="font-size : 198px; font-family:'Poppins">BLO?</p>
-    </main>
+        <h2>PROJETS</h2>
+        <section class="pfMain">
+            <div class="selector">
+                <button class="active showAll" data-cursor-stick="#cursor-stick-area" data-cursor="-color-dark -md"
+                    data-cursor-text="Filtrer"><span id="cursor-stick-area">Tout voir</span></button>
+                <button class="showUi" data-cursor-stick="#cursor-stick-area2" data-cursor="-color-dark -md "
+                    data-cursor-text="Filtrer"><span id="cursor-stick-area2">Ui/Ux</span></button>
+                <button class="showFront" data-cursor-stick="#cursor-stick-area3" data-cursor="-color-dark -md "
+                    data-cursor-text="Filtrer"><span id="cursor-stick-area3">Web Design</span></button>
+                <button class="showGraphic" data-cursor-stick="#cursor-stick-area4" data-cursor="-color-dark -md "
+                    data-cursor-text="Filtrer"><span id="cursor-stick-area4">Graphic Design</span></button>
+                <button class="showDesign" data-cursor-stick="#cursor-stick-area5" data-cursor="-color-dark -md "
+                    data-cursor-text="Filtrer"><span id="cursor-stick-area5">Branding</span></button>
+            </div>
+        </section>
+        <div class="mainDisplay">
+            <a href="index.html" class="card card-tall card-wide ui"
+                style="background-image:url('assets/images/projects/Abyss.PNG')">
+                <div class="title">title</div>
+            </a>
+            <a href="index.html" class="card card-tall design"
+                style="background-image:url('assets/images/projects/hwasa.PNG')">
+                <div class="title">title</div>
+            </a>
+            <a href="projectPages/GLRY/GLRY.html" class="card front"
+                style="background-image:url('assets/images/projects/glry.PNG')"
+                data-link="/projectPages/GLRY/GLRY.html">
+                <div class="title">title</div>
+            </a>
+            <div class="card ui" style="background-image:url('assets/images/projects/SB2.PNG')">
+                <div class="title">title</div>
+            </div>
+            <div class="card design" style="background-image:url('assets/images/projects/zc.PNG')">
+                <div class="title">title</div>
+            </div>
+            <div class="card front" style="background-image:url('assets/images/projects/glry.PNG')">
+                <div class="title">title</div>
+            </div>
+            <div class="card card-wide ui" style="background-image:url('assets/images/projects/SB2.PNG')">
+                <div class="title">title</div>
+            </div>
+            <div class="card design" style="background-image:url('assets/images/projects/hwasa.PNG')">
+                <div class=" title">title</div>
+            </div>
+            <div class="card front" style="background-image:url('assets/images/projects/Abyss.PNG')">
+                <div class="title">title</div>
+            </div>
+            <div class="card card-wide graphic" style="background-image:url('assets/images/projects/zc.PNG')">
+                <div class="title">title</div>
+            </div>
+            <div class="card ui" style="background-image:url('assets/images/projects/SB2.PNG')">
+                <div class="title">title</div>
+            </div>
 
+    </main>
 
     <footer id="footer">
         <div class="nav-footer">
@@ -74,7 +125,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
     <!-- MyJS -->
 
-    <script src="assets/scripts/scrollTrigger.js"></script>
+    <!-- <script src="assets/scripts/scrollTrigger.js"></script> -->
+    <script src="assets/scripts/cursor.js"></script>
     <script src="assets/scripts/script.js"></script>
 </body>
 

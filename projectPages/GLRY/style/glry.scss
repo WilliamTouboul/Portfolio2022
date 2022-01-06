@@ -132,7 +132,6 @@ main {
 
         &:hover {
             color: $white;
-            text-decoration: underline;
         }
     }
 
@@ -142,7 +141,25 @@ main {
 
 
 
-
+.ht-cursor-text {
+    position: absolute;
+    top: -18px;
+    left: -18px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0) rotate(10deg);
+    opacity: 0;
+    color: $white !important;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    font-family: 'Poppins';
+    transition: opacity 0.4s, transform 0.3s;
+}
 
 
 
